@@ -8,7 +8,7 @@
       <link href="/Test/"/>
       <url>/Test/</url>
       
-        <content type="html"><![CDATA[<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>$$<br>[<br>\int F\cdot \mathrm{d}y=\dfrac{1}{2}\left( n^{2}-n(0)^2\right) =-\dfrac{1}{2}\left(\dfrac{\pi n_{0}}{2j}\right) ^{2}y^{2}<br>\tag{28}<br>]<br>$$</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>$$<br>\int F\cdot \mathrm{d}y=\dfrac{1}{2}\left( n^{2}-n(0)^2\right) =-\dfrac{1}{2}\left(\dfrac{\pi n_{0}}{2j}\right) ^{2}y^{2}<br>\tag{28}<br>$$</p>]]></content>
       
       
       
