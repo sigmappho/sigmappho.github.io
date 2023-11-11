@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\xeCJKsetup{CJKmath=true} 
+\begin{document}
+\section*{简单光学题(40分)(命题：YY)}
+\[\]
+(1)由费马原理
+\[
+n x \left( \theta\right) +r\left( \theta\right) =nx_{0}+r_{0}
+\tag{1}
+\]
+由长度约束
+\[
+x \left( \theta \right) +r\left(\theta\right)  \cos\theta =x_{0}+r_{0}
+\tag{2}
+\]
+$(1)-n(2)$
+\[
+\left( -1+n\cos \theta \right) r\left( \theta \right) =\left(n-1\right) r_{0}
+\tag{3}
+\]
+可得
+\[
+r\left( \theta \right) =\dfrac{\left( n-1\right) r_{0}}{-1+n\cos \theta }
+\tag{4}
+\]
+与极坐标下的圆锥曲线标准方程类比
+\[
+r=\dfrac{p}{1+e\cos \theta }
+\tag{5}
+\]
+得
+\[
+e=n=\dfrac{c}{a}
+\tag{6}
+\]
+\[
+\left( n-1\right) r _{0}=\dfrac{b^{2}}{a}=\left( e^{2}-1\right) a
+\tag{7}
+\]
+\[
+a=\dfrac{r_{0}}{n+1}
+\tag{8}
+\]
+\[
+c=\dfrac{nr_{0}}{n+1}
+\tag{9}
+\]
+\[
+b=\sqrt{\dfrac{n-1}{n+1}}r_{0}
+\tag{10}
+\]
+有
+\[
+\dfrac{x^{2}}{\left( \dfrac{r_{0}}{n+1}\right) ^{2}}-\dfrac{y^2}{\dfrac{n-1}{n+1}r_0^{2}}=1
+\tag{11}
+\]
+原点在$O$右侧$\dfrac{r_0}{n+1}$
+\[\]
+(2)
+\[r_0\cos\theta +\dfrac{mv}{qB}\sin \theta =f
+\tag{12}
+\]
+\[
+y=r\sin \theta 
+\tag{13}
+\]
+\[
+\sin \theta =\dfrac{xqB}{mv}
+\tag{14}
+\]
+带入(12)
+\[
+x+r\sqrt{ {1-\left( \dfrac{xqB}{mv}\right) ^{2}}}=f
+\tag{15}
+\]
+\[
+r=\dfrac{f-x}{\sqrt{1-\left( \frac{xqB}{mv}\right) ^{2}}}
+\tag{16}
+\]
+\[
+y=\dfrac{x\left( f- x\right) }{\sqrt{\left( \frac{mv}{qB}\right) ^{2}-x^{2}}}
+\tag{17}
+\]
+(3)
+利用简谐运动周期与振幅无关的特点，可得电场力是线性恢复力
+\[
+\alpha =1
+\tag{18}
+\]
+\[
+-kyq=m\ddot{y}
+\tag{19}
+\]
+\[
+\omega=\sqrt{\dfrac{kq}{m}}
+\tag{20}
+\]
+\[
+t=\dfrac{T}{4}=\dfrac{\pi }{2}\sqrt{\dfrac{m}{kq}}
+\tag{21}
+\]
+\[
+\left( \dfrac{2f}{\pi v}\right) ^{2}=\dfrac{m}{kq}
+\]
+\[
+k=\dfrac{m}{q}\left( \dfrac{\pi v}{2f}\right) ^{2}
+\tag{22}
+\]
+(4)
+类比力学中的莫培督原理与光学的费马原理
+\[\delta \int p\cdot dq=0\leftrightarrow \delta \int n\cdot dl=0
+\]
+取$p\leftrightarrow n,q\leftrightarrow l,m=1$
+\[\]
+在$y$处进入电场的速度为
+\[
+v=n(y)
+\tag{23}
+\]
+时间
+\[
+t=\dfrac{f-x}{n\left( y\right) }=\dfrac{f}{n_{0}}
+\tag{24}
+\]
+\[
+E_p=-\dfrac{1}{2}n^{2}
+\tag{25}
+\]
+\[
+\omega=\dfrac{\pi n_{0}}{2f}=\sqrt{k}
+\tag{26}
+\]
+\[
+F=-ky=-\left(\dfrac{\pi n_{0}}{2f}\right) ^{2}y
+\tag{27}
+\]
+\[
+\int F\cdot \mathrm{d}y=\dfrac{1}{2}\left( n^{2}-n(0)^2\right) =-\dfrac{1}{2}\left(\dfrac{\pi n_{0}}{2j}\right) ^{2}y^{2} 
+\tag{28}
+\]
+\[
+n=\sqrt{ n_{0}^{2}-\left(\dfrac{\pi n}{2f}\right) ^{2}y^{2}}
+\tag{29}
+\]
+\[
+x=f\left[ 1-\sqrt{1-\left( \dfrac{\pi y}{2f}\right) ^{2}}\right]
+\tag{30}
+\]
+\textbf{评分标准:}\par
+共$60$ 分\par
+(1)共$9$分 $(1),(2),(3),(6),(7),(8),(9),(10),(11)$各$1$分\par
+(2)共$8$分 $(12),(13),(14),(15)$各$1$分,$(16),(17)$各$2$分\par
+(3)共$11$分 $(19),(20),(21),(22)$各$2$分 $(18)$$3$分\par
+(4)共$12$分 $(24),(25),(26),(27),(29),(30)$各$2$分 \par
+\end{document}
