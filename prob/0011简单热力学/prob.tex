@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\xeCJKsetup{CJKmath=true} 
+
+\begin{document}
+\section*{简单热力学(40分)}
+本题探究热力学方程得出热力学参量。\par
+补充:Maxwell关系
+$$
+\begin{aligned}
+\left( \dfrac{\partial T}{\partial V}\right) _{S}=-\left( \dfrac{\partial p}{\partial S}\right) _{V}\\
+\left( \dfrac{\partial T}{\partial p}\right) _{S}=+\left( \dfrac{\partial V}{\partial S}\right) _{p}\\
+\left( \dfrac{\partial S}{\partial V}\right) _{T}=+\left( \dfrac{\partial p}{\partial S}\right) _{V}\\
+\left( \dfrac{\partial S}{\partial p}\right) _{T}=-\left( \dfrac{\partial V}{\partial S}\right) _{p}\\
+\end{aligned}
+$$
+\begin{itemize}
+    \item[(1)]对于气体系统
+    \begin{itemize}
+        \item[(1.1)]试证:$$\left(\dfrac{\partial U}{\partial V}\right)_T=-p+T \left(\dfrac{\partial p}{\partial T}\right)_V$$
+        \item[(1.2)]试证:对于任意系统，均有$$\left(\dfrac{\partial C_V}{\partial V} \right)_T=T\left(\dfrac{\partial^2 p}{\partial T^2}\right)_V$$
+        \item[(1.3)]给出$1\ \mathrm{mol}$气体的Van der Walls方程$$\left(p+\dfrac{a}{V^2}\right)(V-b)=RT$$\par
+        试证明其定容摩尔热容仅是温度的函数，并在温度变化不大时，求出其内能与商的表达式，可含积分常数。
+        \item[(1.4)]Redlich-Kwory方程考虑了温度及密度对分子间作用力的影响.\par
+        $1\mathrm{mol}$的R-K方程为$$p=\dfrac{RT}{V-b}-\dfrac{a}{T^5 V(V+b)}$$
+         给出$V\to 0$时，其定容摩尔热容$C_{V_0}(T)$.试求任意状态时其$C_V$的值.
+    \end{itemize}
+    \item[(2)] 对于表面系统，给定表面的张力系数$\sigma(T)$.液体表面积用$A$表示
+    \begin{itemize}
+        \item[(2.1)] 已知自由能$F=U-TS$是求表面系统的内能与自由能的微分表达式.\par 提示:需要考虑温度的影响
+        \item[(2.2)] 在等温条件下，对$F$进行积分.求出$F$的表达式.(积分常量由自己定需符合实际)
+        \item[(2.3)] 前两问进行对比得出表面系统商和内能的表达式.
+    \end{itemize}
+\end{itemize}
+\end{document}

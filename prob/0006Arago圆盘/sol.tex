@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\xeCJKsetup{CJKmath=true} 
+
+\begin{document}
+\section*{Arago圆盘(40分)(命题人：HJH)}
+\[\]
+(1)
+\[
+\vec{B }=\dfrac{\mu _{0}}{4\pi }\dfrac{3\left( \vec{\mu }\cdot \hat{r}\right) \hat{r}-\vec{\mu }}{r^{3}}
+\tag{1}\]
+\[
+\begin{aligned}
+&\vec{F}=q\vec{v}\times\vec{B}=q(\vec{\omega}\times\vec{\rho})\times\vec{B}\\
+&=q\left[\left(\vec{\omega}\cdot\vec{B}\right)\vec{\rho}-\left(\vec{\omega}\cdot\vec{\rho}\right)\vec{B}\right]\\
+&=q\left(\vec{\omega}\cdot\vec{B}\right)\vec{\rho}
+\end{aligned}
+\tag{2}\]
+\[
+\vec{\mu}=\mu\left(\cos \varphi,\sin \varphi,0\right)
+\tag{3}\]
+\[
+\vec{r}=\left(\rho\cos\theta,\rho\sin\theta,-h\right)
+\tag{4}\]
+\[
+B_z=\frac{\mu_0}{4\pi}\frac{3\mu\rho\cos(\varphi-\theta)(-h)}{r^5}
+\tag{5}\]
+(2)认为$\vec{E}=\vec{v}\times\vec{B}$为等效电场
+\[
+\begin{aligned}
+&\vec{j}=\sigma\vec{E}=\sigma(\vec{\omega}\cdot\vec{B})\vec{r}   \\
+&=\dfrac{\sigma\mu_0\omega3\mu\rho\cos(\varphi-\theta)(-5)}{u\pi r^5}(\rho \cos\theta,\rho\sin \rho,0)
+\end{aligned}
+\tag{6}\]
+\[
+\vec{B}=\frac{\mu_0}{4\pi}\int\dfrac{\vec{j}\cdot\mathrm{d}V\times(-\vec{r})}{r^3}
+\tag{7}\]
+积分得
+\[
+\vec{B}=\left(\dfrac{\mu_0}{4\pi}\right)^2\frac{3\sigma\omega\mu h^2\pi}{2}\left[\dfrac{1}{2}\left(\dfrac{1}{h^4}-\dfrac{1}{\left(R^2+h^2\right)^2}\right)+\dfrac{h^2}{3}\left(-\dfrac{1}{h^6}+\dfrac{1}{\left(R^2+h^2\right)^3}\right)\right](-\sin\varphi \hat{x}+\cos \varphi \hat{y})
+\tag{8}\]
+令
+\[
+k=\left(\dfrac{\mu_0}{4\pi}\right)^2\frac{3\sigma\mu h^2\pi}{2}\left[\dfrac{1}{2}\left(\dfrac{1}{h^4}-\dfrac{1}{\left(R^2+h^2\right)^2}\right)+\dfrac{h^2}{3}\left(-\dfrac{1}{h^6}+\dfrac{1}{\left(R^2+h^2\right)^3}\right)\right]
+\tag{9}\]
+由力矩公式
+\[
+\vec{M}=\vec{v}\times\vec{B}=k\mu\omega\hat{z}
+\tag{10}\]
+\textbf{评分标准:}\par
+共$40$ 分\par
+(1)共$10$分 $(1),(2),(3),(4),(5)$各$2$分\par
+(2)共$30$分 $(6),(7),(8),(9),(10)$各$6$分\par
+\end{document}

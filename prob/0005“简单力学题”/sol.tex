@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\xeCJKsetup{CJKmath=true} 
+
+\begin{document}
+\section*{“简单力学题”(50分)(命题人：SCK)}
+\[\]
+由能动量定理
+\[
+\begin{cases}
+    Mv=m\left( L\dot{\theta} \sin \theta -v\right) \\
+    \dfrac{1}{2}mv^{2}+\dfrac{1}{2}m\left( 2\dot{\theta} \sin \theta -v\right) ^{2}+\dfrac{1}{2}m\left( L\dot{\theta}\cos \theta \right) ^{2}=mgL\sin \theta 
+\end{cases}
+\tag{1}\]
+解得
+\[
+\dot{\theta} =\sqrt{\dfrac{2\left( M+m\right) g\sin \theta }{L\left( M+m\cos^2\theta \right) }}
+\tag{2}\]
+\[
+v=\dfrac{mL\sin \theta }{M+m}\sqrt{\dfrac{2\left( M+m\right) g\sin \theta }{L\left( M+m\cos ^{2}\theta \right) }}
+\tag{3}\]
+\[
+a=\dfrac{\mathrm{d}v}{\mathrm{d}t}=\dfrac{\mathrm{d}v}{\mathrm{d}\theta }\dot{\theta}=\dfrac{m\left[ \left( 3M+2m\right) \sin \theta \cos \theta +m\sin \theta \cos ^{3}\theta \right] }{\left( M+m\cos^{2}\theta \right) ^{2}}g
+\tag{4}\]
+% \par
+% \begin{wrapfigure}{r}{7cm}
+% 	\vspace{-5pt}    % 对应高度1
+% 	\includegraphics[width=7cm]{img/2.jpeg}\\
+% 	\vspace{-5pt}    % 对应高度2
+% 	\caption{}
+% 	\vspace{-5pt}    % 对应高度3
+% \end{wrapfigure}
+在木块系中($F$为绳子拉力)
+\[
+F\cos \theta=Ma
+\tag{5}\]
+考虑临界情况
+\[
+ -Mg\dfrac{L}{2}-Ma\dfrac{h}{2}+F\cos \theta \left(L+\dfrac{h}{2}\right) -F\sin \theta L\geq 0
+\tag{6}\]
+化简得
+\[
+a\geq\dfrac{g}{2(1-\tan\theta)}
+\tag{7}\]
+即
+\[
+\dfrac{2m\left[ \left( 3M+2m\right) \left( \sin \theta \cos \theta \right) +msin\theta \cos ^{3}\theta \right] \left( 1-\tan \theta \right) }{\left( M+m\cos ^{2}\theta \right) ^{2}}\geq 1
+\tag{8}\]
+令$\frac{M}{m}= k$,$\tan\theta= t$
+\[
+\alpha =\dfrac{2\left[ \left( 3k+2\right) \left( 1+t^{2}\right) t+t\right] \left( 1-t\right) }{\left[ k\left( 1+t^{2}\right) +1\right] ^{2}}\geq 1
+\tag{9}\]
+对(6)左式求导取极值
+\[
+\left[ k\left( 1+t^{2}\right) +1\right] \left\{ \left[ \left( 3k+2\right) \left( 1+3t^{2}\right) +1\right] \left( 1-t\right) -\left[ \left( 3k+2\right) \left( 1+t^{2}\right) t+t\right] \right\} =4kt\left( 1-t\right) \left[ \left( 3k+2\right) \left( 1+t^{2}\right) t+t\right] 
+\tag{10}\]
+\[
+\left( 3k^{2}+2k\right) t^{4}+\left( 6k^{2}+14k+8\right) t^{3}-\left( 6k+b\right) t^{2}+\left( 6k^{2}+12k+6\right) t-\left( 3k^{2}+6k+3\right) =0
+\tag{11}\]
+\[
+代入k=1解得t=0.4765453307
+\tag{12}
+\]
+\[
+代入(11)解得\alpha=0.7177259631<1,故不会翻起
+\tag{13}
+\]
+\[
+代入k=\frac{1}{2}解得t=0.5043814407
+\tag{14}
+\]
+\[
+代入(11)解得\alpha=1.017831264>1,故会翻起，可得\theta=23.688^{\circ}
+\tag{15}
+\]
+\textbf{评分标准:}\par
+共$50$ 分\par
+$(1),(2),(3),(4),(5),(7),(8),(9),(10),(11)$各$3$分,$(12),(13),(14),(15)$各$5$分
+\end{document}

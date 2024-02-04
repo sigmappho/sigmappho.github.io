@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\xeCJKsetup{CJKmath=true} 
+
+\begin{document}
+\section*{受限三体问题与拉格朗日点(60分)(命题：HJH)}
+\[\]
+(1)
+先求公转角速度
+\[
+\dfrac{Gm_1 m_2}{r^2}=\Omega^2 r_1 m_1=\Omega^2 \dfrac{m_1 m_2 r}{m_1 +m_2}
+\]
+\[
+=>\Omega^2=\dfrac{G(m_1+m_2)}{r^3}\tag{1}
+\]
+\[
+V_{\mathbf{eff}}(x,y)=
+\dfrac{-Gm_1}{\sqrt{(x-r_1)^2+y^2}}
+-\dfrac{Gm_2}{(\sqrt{(x+r_2)^2+y^2}}
+-\dfrac{1}{2}\dfrac{G(m_1+m_2)}{r^3}(x^2+y^2)\tag{2}
+\]
+(2)
+\[
+\dfrac{\partial V_{\mathbf{eff}}}{\partial x}
+=0
+=\dfrac{Gm_1(x-r_1)}{[(x-r_1)^2+y^{2}]^{\frac{3}{2}}}
++\dfrac{Gm_2(x+r_2)}{[(x+r_2)^2+y^{2}]^{\frac{3}{2}}}
+-\dfrac{G(m_1+m_2)}{r^3}x
+\tag{3}
+\]
+\[
+\dfrac{\partial V_{\mathbf{eff}}}{\partial y}=0
+=\dfrac{Gm_1 y}{[(x-r_1)^2+y^{2}]^{\frac{3}{2}}}
++\dfrac{Gm_2 y}{[(x+r_2)^2+y^{2}]^{\frac{3}{2}}}
+-\dfrac{G(m_1+m_2)}{r^3}y
+\tag{4}
+\]
+对于$y=0,(4)$易知满足，对于$(3)$，同除$\dfrac{G(m_1+m_2)}{r}$,得
+\[
+ \dfrac{r_2(x-r_1)}{|x-r_1|^3}
++\dfrac{r_2(x+r_2)}{|x+r_2|^3}
+=\dfrac{x}{r^2}\tag{3'}
+\]
+令$f(x)=\dfrac{r_2(x-r_1)}{|x-r_1|^3}+\dfrac{r_2(x+r_2)}{|x+r_2|^3}$,有
+\[
+\lim_{x \to -\infty}f(x)=0^-\tag{5}
+\]
+\[
+\lim_{x \to (-r_2)^-}f(x)=-\infty,\lim_{x \to (-r_2)^+}f(x)=+\infty\tag{6}
+\]
+\[
+\lim_{x \to (r_1)^-}f(x)=-\infty,\lim_{x \to (r_1)^+}f(x)=+\infty\tag{7}
+\]
+\[
+\lim_{x \to +\infty}f(x)=0^+\tag{8}
+\]
+\[可见，有3根\tag{9}\]
+\[L_1(-\infty,-r_2),L_2(-r_2,r_1),L_3(r_1,\infty)\tag{10}\]
+(3)
+在$\dfrac{m_2}{m_1}=\varepsilon\to 0$
+\[
+r_1=\dfrac{m_2}{m_1+m_2}r=\dfrac{\varepsilon}{\varepsilon+1}r\approx \varepsilon(1-\varepsilon)r\tag{11}
+\]
+\[
+r_2=\dfrac{m_1}{m_1+m_2}r=\dfrac{1}{\varepsilon+1}r\approx (1-\varepsilon)r\tag{12}
+\]
+保留零阶，代入$(4)$式
+\[
+\dfrac{rx}{|x|^3}=\dfrac{x}{r^2}\tag{13}
+\]
+\[
+=>x=\pm r\tag{14}
+\]
+\[
+可得L_1,L_2在m_2附近，L_3在离原点r附近\tag{15}
+\]
+(4)
+对于$L_1,L_2$,令$x=-r+\delta_{1,2}r$,带入$(4)$式，保留一阶
+\[
+-\dfrac{(1-\varepsilon)r}{(-r+\delta_{1,2}r-\varepsilon r)^2}
+\pm 
+\dfrac{\varepsilon r}{(-r + \delta_{1,2} r +(1-\varepsilon)r)^2}=\dfrac{-r+\delta_{1,2}r}{r^2}\tag{16}
+\]
+\[
+\pm \dfrac{\varepsilon}{(\delta_{1,2}-\varepsilon)^2}=3(\delta_{1,2}-\varepsilon)
+\]
+由于两边小量阶数一致，取$1\gg\delta_{1,2}\gg\varepsilon$ ,带入有
+\[
+\pm \dfrac{\varepsilon}{\delta_{1,2}^2}\left(1+\dfrac{2\varepsilon}{\delta_{1,2}}\right)=3(\delta_{1,2}-\varepsilon)
+\]
+\[
+=>\pm  \dfrac{\varepsilon}{\delta_{1,2}^2}=3 \delta_{1,2}^2
+\]
+\[
+=>\delta_{1,2}= \pm \left(\dfrac{\varepsilon}{3}\right)^{\frac{1}{3}}\tag{17}
+\]
+对于$L_3$,令$x=r+\delta_3$
+\[
+\dfrac{1-\varepsilon}{(1+\delta_3-\varepsilon)^2}+\dfrac{\varepsilon}{(1+\delta_3+1-\varepsilon)^2}=1+\delta_3\tag{18}
+\]
+得
+\[
+\delta_3=\dfrac{5}{12}\varepsilon\tag{19}
+\]
+故
+\[
+L_1\left(-r-(\dfrac{\varepsilon}{3})^{\frac{1}{3}}r,0\right)\tag{20}
+\]
+\[
+L_2\left(-r+(\dfrac{\varepsilon}{3})^{\frac{1}{3}}r,0\right)\tag{21}
+\]
+\[
+L_3\left(r+\dfrac{5}{12}\varepsilon r,0\right)\tag{22}
+\]
+(5)
+由$(4)\times \dfrac{x}{y}$与$(3)$相减得
+\[
+\dfrac{-r_1 r_2}{[(r_1-x)^2+y^2]^{\frac{2}{3}}}
++\dfrac{r_1 r_2}{[(r_2+x)^2+y^2]^{\frac{2}{3}}}
+=0\tag{23}
+\]
+由$(4)\times \dfrac{1}{y}$得
+\[
+\dfrac{r_2}{[(r_1-x)^2+y^2]^{\frac{2}{3}}}
++\dfrac{r_1}{[(r_2+x)^2+y^2]^{\frac{2}{3}}}
+=\dfrac{1}{r^2}\tag{24}
+\]
+$(23),(24)$可看作关于分母的一元二次方程组，解得
+\[
+(r_1-x)^2+y^2=(r_2+x)^2+y^2=r^2\tag{25}
+\]
+\[
+x=\dfrac{r_1-r_2}{2},y=\pm\dfrac{\sqrt{3}r}{2}\tag{26}
+\]
+\[
+可得L_4,L_5与 m_1,m_2构成两个等边三角形\tag{27}
+\]
+\textbf{评分标准:}\par
+共$60$ 分\par
+(1)共$4$分 $(1),(2)$各$2$分\par
+(2)共$16$分 $(3),(4)$各$2$分,$(5),(6),(7),(8)$各$2$分 $(9)$各$2$ $(10)$$2$分\par
+(3)共$8$分 $(11),(12),(13)$各$1$分 $(14)$$3$分 $(15)$ $2$分\par
+(4)共$20$分 $(16)$$2$分 $(17)$ $6$分 $(18)$$2$分 $(19)$各$4$分 $(20),(21),(22)$各$2$分\par
+(5)共$12$分 $(23)$ $2$分 $(25)$ $4$分 $(26)$ $4$分 $(27)$ $2$分\par
+
+\end{document} 
