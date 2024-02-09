@@ -12,5 +12,87 @@
 \xeCJKsetup{CJKmath=true} 
 
 \begin{document}
-\section*{(分)}
-\end{document} 
+\section*{重力弹球(80分)}
+
+\subsection*{PART.A\ \ 一些准备工作}
+\begin{itemize}
+    \item[(A.1)]
+    \[\vec{n}|_p=\dfrac{\vec{\nabla}\cdot M|_p}{\left|\vec{\nabla}\cdot M|_p\right|}=\dfrac{(-\dfrac{x}{2f},-\dfrac{y}{2f},1)}{\sqrt{1+\dfrac{x^2+y^2}{4f^2}}}\tag{1}\]
+    \item[(A.2)]
+    \[v_{\parallel}=\sqrt{v_{x}^{2}+v_{y}^{2}},z=v_z t-\frac{1}{2}gt^{2},x'=v_{\parallel}t\]
+    \[z=\frac{v_z}{v_{\parallel}}x'-\dfrac{1}{2}g\dfrac{x'^{2}}{v_{\parallel^2}}\tag{2}\]
+    \[p=\frac{v_{\parallel}^{2}}{g}\]
+    \[F=\frac{v_x^2+v_y^2}{2g}\tag{3}\]
+    \item[(A.3)]
+    \[\vec{v'}=\vec{v}-2(\vec{n}|_P\cdot\vec{v})\cdot\vec{n}|_P\tag{4}\]
+    \item[(A.4)]
+    \[\dfrac{L_z}{m}=(\vec{r}\times\vec{v})z=(\vec{r}\times\vec{v'})_z-2(\vec{n}|_P\cdot\vec{v})(\vec{r}\times\vec{n})_z=(\vec{r}\times\vec{z})_z\tag{5}\]
+    利用了$(\vec{r}\times\vec{n}|_P)_z=0$
+\end{itemize}
+\subsection*{PART.B\ \ 一种特殊情况}
+\begin{itemize}
+    \item[(B.1)]\[\tan\dfrac{\theta}{2}=\frac{v_{r}}{v_{\phi}}\tag{6}\]
+    \item[(B.2)]由于碰撞点在同一水平圆上，有
+    \[\begin{cases}2r_{0}\sin\dfrac{\theta}{2}=\sqrt{v_{r}^{2}+v_{\phi}^{2}}t\\v_{z}t-\dfrac{1}{2}gt^{2}=0\end{cases}\]
+    \[z_{z}=\dfrac{1}{2}g\frac{2r_{0}\sin\dfrac{\theta}{2}}{\sqrt{v_{r}^{2}+v_{\phi}^{2}}}=\dfrac{gr_{0}\sin\dfrac{\theta}{2}}{\sqrt{v_{r}^{2}+v_{\phi}^{2}}}\tag{7}\]
+    由于碰撞撞点要一直在这个圆上,所以入射速度与出射速度与水平方向夹角不变
+    \[\dfrac{v_r}{v_z}=\dfrac{r_0}{2f}\tag{8}\]
+    由$(7),(8)$式
+    \[v_z=\dfrac{zf}{r_{0}}v_r=\frac{gr_{0}\sin\dfrac\theta2}{v_r\sqrt{1+\cot^{2}\dfrac\theta2}}=\dfrac{gr_{0}\sin^{2}\dfrac\theta2}{v_r}\]
+    \[\Rightarrow\quad v_r^{2}=\dfrac{gr_{0}^{2}}{2f}\sin^{2}\frac{\theta}{2}=\dfrac{gr_{0}^{2}}{2f}\dfrac{1-\cos\theta}{2}\]
+    解得
+    \[\begin{cases}v_{r}=\dfrac{r_{0}}{2}\sqrt{\dfrac{g}{f}(1-\cos\theta)}\\v_{z}=\sqrt{gf(1-\cos\theta)}\\v_{\phi}=\dfrac{r_{0}}{2}\sqrt{\dfrac{g}{f}(1+\cos\theta)}\end{cases}\tag{9,10,11}\]
+    \item[(B.3)]离开圆心$r$处有
+    \[\begin{cases}x^{\prime}=r_0\sin\dfrac{\theta}{2}-\sqrt{r^2-r_0^2\cot^2\dfrac{\theta}{2}}=\sqrt{v_{r}^2+v_{\phi}^2}t\\
+        z^{\prime}=v_zt-\dfrac{1}{2}gt^2=\dfrac{v_zx}{\sqrt{v_{r}^2+v_{\psi}^2}}-\dfrac12g\dfrac{x^2}{v_{r}^2+v_{\psi}^2}\end{cases}\]
+        化简后可得与$\theta$无关
+        \[z=z^{\prime}+\frac{r_{0}^{2}}{4y}-f=\frac{r_{0}^{2}}{4y}-\frac{fr^{2}}{r_{0}^{2}}\qquad r\in[v_{0}\cos\dfrac\theta2,v_{0}]\] 
+\end{itemize}
+\subsection*{PART.C\ \ 二维抛物线内的弹球}
+\begin{itemize}
+    \item[(C.1)]
+    \[x=v\cos\alpha t\]
+    \[z=v\sin\alpha t-\dfrac 12gt^2=x\tan\alpha-\dfrac 12gt^2=x\tan\alpha-\dfrac 12g\dfrac{x^2}{v^2\cos^2\alpha}\]
+    \[f=\frac{v^2\cos^2\alpha}{2g}\]
+    \[x=\dfrac{\tan\alpha}{-2(-\dfrac12g\dfrac1{v^2\sin\alpha})}=\dfrac{v^2\sin\alpha\cos\alpha}{g}=\frac{v^2\sin2\alpha}{2g}\]
+    \item[(C.2)]由抛物线的光学性质得
+    \begin{center}
+        \includegraphics[scale=0.3]{img/0017.4.jpg}\par
+    \end{center}
+    \[\angle EAM=\angle MAK\]
+    \[\angle DAL=\angle LAK\]
+    \[\angle EAO=-\angle EAM+\angle DAM=-\angle MAK+\angle OAM\]
+    \[\angle DAO=\angle DAL-\angle DAL=\angle LAK-\angle DAL\]
+    \[\angle EAO=-(\angle MAK+\angle MAK)+\angle DAM+\angle OAL=-\angle MAL+\angle MAL=0\]
+    \item[(C.3)]
+    \[H=z_{0}+\dfrac{\dfrac{1}{2}mv_z^{2}}{mg}+\frac{v^{2}\cos^{2}\alpha}{2g}=z_{0}+\frac{v^{2}}{2g}\]
+    \[与碰撞前后无关\]
+    \item[(C.4)]由于
+    \[\angle EAO=\angle OAD,AE=AO\]
+    可得
+    \[\triangle OAE\cong\triangle OAD\]
+    故
+    \[OE=OD\]
+    \item[(C.5)] 以轨迹焦点为原点
+    \[\begin{cases}z^{\prime}=z-R\sin\alpha\\x^{\prime}=x-R\cos\alpha\end{cases}\]
+    而
+    \[f=\dfrac12(H-R\sin\alpha)\]
+    \[2(H-R\sin\alpha)(z-R\sin\alpha)=-(x-R\cos\alpha)^2+(H-R\sin\alpha)^2\]
+    设\[S(x,z,\alpha)=2R(z\sin\alpha+x\cos\alpha)+H^2-x^2-R^2-2Hz=0\]
+    \[\frac{\partial S}{\partial\alpha}=2R\left(z\cos\alpha-x\sin\alpha\right)=0\]
+    \begin{itemize}
+        \item[1)]\[\sin\alpha=\dfrac{z}{\sqrt{x^2+z^2}}\quad\cos\alpha=\dfrac{x}{\sqrt{x^2+z^2}}\]
+        \[-2Hz+2R\sqrt{x^2+z^2}\quad+H^2-x^2+R^2=0\]
+        \item[2)]\[\sin\alpha=-\dfrac{z}{\sqrt{x^2+z^2}}\quad\cos\alpha=-\dfrac{x}{\sqrt{x^2+z^2}}\]
+        \[-2Hz-2R\sqrt{x^2+z^2}+H^2-x^2-R^2=0\]
+    \end{itemize}
+    \item[(C.6)]过$B,C$作竖直线,由抛物线的第二定义
+    \[\overline{BA}+\overline{BO}=\overline{BM}+\overline{BD}=\overline{EG}\]
+    \[\overline{CA}+\overline{CO}=\overline{CE}+\overline{CG}=\overline{DM}\]
+    \[到O,A距离为定值\]
+\end{itemize}
+\subsection*{参考文献}
+\bibliographystyle{plain}
+\bibliography{citation.bib}
+\end{document}
+
