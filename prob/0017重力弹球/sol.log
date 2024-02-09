@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.11)  9 FEB 2024 23:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.11)  9 FEB 2024 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -489,20 +489,21 @@ LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
 ]
 File: img/0017.4.jpg Graphic file (type bmp)
 <img/0017.4.jpg>
- [2]
-No file sol.bbl.
-[3] (./sol.aux)
+ [2] [3] (./sol.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 9748 strings out of 476683
- 249248 string characters out of 5804047
+ 9755 strings out of 476683
+ 249391 string characters out of 5804047
  1862018 words of memory out of 5000000
- 29874 multiletter control sequences out of 15000+600000
- 518456 words of font info for 71 fonts, out of 8000000 for 9000
+ 29880 multiletter control sequences out of 15000+600000
+ 518464 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,10n,97p,415b,263s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
