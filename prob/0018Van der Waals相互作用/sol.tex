@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[top=0.8in, bottom=0.8in,left=0.8in, right=0.8in]{geometry}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+% \xeCJKsetup{CJKmath=true} 
+\begin{document}
+% \everymath{\displaystyle}
+\section*{van der Waals相互作用}
+\begin{itemize}
+    \item[(1)]由偶极矩在外场中的电势能公式
+    \begin{equation}
+        U=-\overrightarrow{p}\cdot\overrightarrow{E}
+    \end{equation}
+    以及电偶极子的电场力公式
+    \begin{equation}
+        \overrightarrow{E}=\dfrac{1}{4\pi\varepsilon_0}\dfrac{3(\overrightarrow{p}\cdot\hat{r})\hat{r}-\overrightarrow{p}}{r^3}
+    \end{equation}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw (-6,0) -- (6,0);
+            \draw[-{Stealth[length=4mm,width=2mm]}] (-5,-1) -- (-3,1);
+            \draw[-{Stealth[length=4mm,width=2mm]}] (2.5,-1)-- (5.5,1);
+            \filldraw [black]
+            (-5,-1) circle [radius=2pt]
+            (-3,1) circle [radius=2pt]
+            (2.5,-1) circle [radius=2pt]
+            (5.5,1) circle [radius=2pt];
+            \draw (-3.7,0) arc [start angle=0, end angle=45, radius=3mm];
+            \draw (4.3,0) arc [start angle=0, end angle=33.8, radius=3mm];
+            \draw (-3.2,0) node[above] {$\theta_1$};
+            \draw (4.8,0) node[above] {$\theta_2$};
+            \draw (-4,0) node[above] {$\overrightarrow{p_1}$};
+            \draw (4,0) node[above] {$\overrightarrow{p_2}$};
+            \draw [<-](2,0) arc (0:300:0.5 and 1);
+            \draw (2,1) node[above] {相对转动角$\varphi$};
+            \draw (0,0) node[above] {$\overrightarrow{r}$};
+        \end{tikzpicture}
+    \end{center}
+    可得其电势能大小为
+    \begin{equation}
+    \begin{aligned}
+        U(\theta_1,\theta_2,\varphi,r)   &= -\overrightarrow{p}\cdot\overrightarrow{E}\\
+            &= -\dfrac{1}{4\pi\varepsilon_0}\dfrac{3(\overrightarrow{p_1}\cdot\hat{r})\hat{r}-\overrightarrow{p_1}}{r^3}\cdot\overrightarrow{p_2}\\
+            &= -\dfrac{1}{4\pi\varepsilon_0}\dfrac{3(\overrightarrow{p_1}\cdot\hat{r})\hat{r}\cdot\overrightarrow{p_2}-\overrightarrow{p_1}\cdot\overrightarrow{p_2}}{r^3}\\
+            &= -\dfrac{1}{4\pi\varepsilon_0}\dfrac{3p_1p_2\cos\theta_1\cos\theta_2-p_1p_2(\cos\theta_1\cos\theta_2+\sin\theta_1\sin\theta_2\cos\varphi)}{r^3}\\
+            &= -\dfrac{1}{4\pi\varepsilon_0}\dfrac{2p_1p_2\cos\theta_1\cos\theta_2-p_1p_2\sin\theta_1\sin\theta_2\cos\varphi}{r^3}\\
+    \end{aligned}
+    \end{equation}
+    \item[(2)]按照定义
+    \begin{equation}
+        \overline{U}=\dfrac{\displaystyle\int_1\displaystyle\int_2U(\theta_1,\theta_2,\varphi,r)\exp\left(-\dfrac{U(\theta_1,\theta_2,\varphi,r)}{k_B T}\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}{\displaystyle\int_1\displaystyle\int_2\exp\left(-\dfrac{U(\theta_1,\theta_2,\varphi,r)}{k_B T}\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}
+    \end{equation}
+    令
+    \begin{equation}
+        \begin{aligned}
+            \beta=&\dfrac{1}{4\pi\varepsilon_0}\dfrac{p_1p_2}{r^3}\dfrac{1}{k_B T}\\
+            f(\Omega)=&2\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2\cos\varphi
+        \end{aligned}
+    \end{equation}
+    上式化为
+    \begin{equation}
+        \begin{aligned}
+        \overline{U}&=\dfrac{\displaystyle\int_1\displaystyle\int_2 k_B T\beta f(\Omega)\exp\left(\beta f(\Omega)\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}{\displaystyle\int_1\displaystyle\int_2\exp\left(\beta f(\Omega)\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}\\    
+        &= k_B T\beta\dfrac{-\dfrac{\partial}{\partial \beta}\displaystyle\int_1\displaystyle\int_2\exp\left(\beta f(\Omega)\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}{\displaystyle\int_1\displaystyle\int_2\exp\left(\beta f(\Omega)\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2}\\
+        &= -k_B T\beta\dfrac{\partial}{\partial \beta}\ln\left(\displaystyle\int_1\displaystyle\int_2\exp\left(\beta f(\Omega)\right)\mathrm{d}\Omega_1\mathrm{d}\Omega_2\right)\\
+        \end{aligned}
+    \end{equation}
+    易知
+    \begin{equation}
+        \mathrm{d}\Omega_1=\sin\theta_1 \mathrm{d}\theta_1 \mathrm{d} \varphi_1
+    \end{equation}
+    \begin{equation}
+        \mathrm{d}\Omega_2=\sin\theta_2 \mathrm{d}\theta_2 \mathrm{d} \varphi_2
+    \end{equation}
+    而由于引入了相对转动角，故
+    \begin{equation}
+        \mathrm{d}\Omega_1\mathrm{d}\Omega_2=\sin\theta_1 \mathrm{d}\theta_1\sin\theta_2 \mathrm{d}\theta_2 \mathrm{d} \varphi
+    \end{equation}
+    下求积分
+    \begin{equation}
+        I=
+        \displaystyle\int_{\theta_1=0}^{\pi} \displaystyle\int_{\theta_2=0}^{\pi}\displaystyle\int_{\varphi=0}^{2\pi}
+        \exp(\beta f(\Omega))\sin \theta_1 \mathrm{d} \theta_1\sin \theta_2 \mathrm{d} \theta_2  \mathrm{d} \varphi
+    \end{equation}   
+    代入题给近似
+    \begin{equation}
+        U(\theta_1,\theta_2,\varphi,r) \sim \dfrac{1}{4\pi\varepsilon_0}\dfrac{\overrightarrow{p_1}\cdot\overrightarrow{p_2}}{r^3}\ll k_B T
+    \end{equation}
+    与Tailor展开公式
+    \begin{equation}
+        \exp(x)\approx 1+x+\dfrac{1}{2}x^2\qquad x\ll1
+    \end{equation}
+    \begin{equation}
+        \begin{aligned}
+        I\approx&
+        \displaystyle\int_{\theta_1=0}^{\pi} \displaystyle\int_{\theta_2=0}^{\pi}\displaystyle\int_{\varphi=0}^{2\pi}
+        \left(1+\beta f(\Omega)+\dfrac{1}{2}\left(\beta f(\Omega)\right)^2\right)\sin \theta_1 \mathrm{d} \theta_1\sin \theta_2 \mathrm{d} \theta_2  \mathrm{d} \varphi\\
+        =&I_0+I_1+I_2            
+        \end{aligned}
+    \end{equation}  
+    其中$I_0,I_1,I_2$分别对应其零阶，一阶，二阶近似的积分结果。易知
+    \begin{equation}
+        I_0=8\pi
+    \end{equation}
+    \begin{equation}
+        I_1=0
+    \end{equation}
+    \begin{equation}
+        I_2=\dfrac{8\pi}{3}\beta^2
+    \end{equation}
+    故有
+    \begin{equation}
+        \begin{aligned}
+        \overline{U}&\approx-k_B T\beta\dfrac{\partial}{\partial \beta}\ln\left(8\pi(1+\dfrac{\beta^2}{3})\right)\\
+            &=-k_B T\beta\dfrac{1}{1+\dfrac{\beta^2}{3}}\cdot\dfrac{2\beta}{3}\\
+            &\approx -k_B T\dfrac{2\beta^2}{3}\\
+            &=-\dfrac{2}{3k_B T}\left(\dfrac{p_1p_2}{4\pi\varepsilon_0}\right)^2\cdot\dfrac{1}{r^6}
+        \end{aligned}
+    \end{equation}
+    \item[(3)]在$p_2$处,电场强度大小为
+    \begin{equation}
+        |\overrightarrow{E}|=\dfrac{p_1}{4\pi\varepsilon_0}\dfrac{\sqrt{1+3\cos^2\theta_1}}{r^3}
+    \end{equation}
+    故其偶极矩大小为
+    \begin{equation}
+        |\overrightarrow{p}|=\alpha\dfrac{p_1}{4\pi\varepsilon_0}\dfrac{\sqrt{1+3\cos^2\theta_1}}{r^3}
+    \end{equation}    
+    代入(1)式
+    \begin{equation}
+        U=-\alpha\dfrac{p_1^2}{(4\pi\varepsilon_0)^2}\dfrac{1+3\cos^2\theta_1}{r^6}
+    \end{equation}   
+    \item[(4)]此时，有
+    \begin{equation}
+        \overline{U}=\dfrac{\displaystyle\int_{\theta_1=0}^{\pi}U\exp\left(-\dfrac{U}{k_B T}\right)\sin\theta_1\mathrm{d}\theta_1}{\displaystyle\int_{\theta_1=0}^{\pi}\exp\left(-\dfrac{U}{k_B T}\right)\sin\theta_1\mathrm{d}\theta_1}
+    \end{equation}
+    保留至零阶项
+    \begin{equation}
+        \overline{U}=-\alpha\dfrac{2p_1^2}{(4\pi\varepsilon_0)^2r^6}
+    \end{equation}
+\end{itemize}
+\end{document} 
